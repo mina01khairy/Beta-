@@ -52,12 +52,12 @@ export default function Cart() {
                                     <div className='px-3' onClick={() => { addToCart(item); toast.success('Success') }}>+</div>
                                 </div>
 
-                                <div onClick={() => removeFromCart(item.id)} className='px-3 py-2 bg-[#ffdcdc] text-[#ff0101]'>
+                                <div onClick={() => removeFromCart(item.id)} className='px-3 py-2 bg-[#ffdcdc] text-[#ff0101] rounded-2xl'>
                                     <i className="fa-solid fa-trash-can  "></i>
                                 </div>
                             </div>
 
-                            <div className='text-[#0058be] mt-3 font-bold text-2xl rounded-2xl'>
+                            <div className='text-[#0058be] mt-3 font-bold text-2xl '>
                                 {item.price}
                             </div>
 
