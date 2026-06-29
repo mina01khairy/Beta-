@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "My App",
+  title: "Mina meta+",
   icons: {
     icon: "/mina.jpeg",
   },
