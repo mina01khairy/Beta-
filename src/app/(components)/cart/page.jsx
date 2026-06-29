@@ -21,7 +21,7 @@ export default function Cart() {
                         Review Quote Request
                     </div>
                     <div className='rounded-full uppercase bg-[#cde4ff] text-xs px-5 py-1 font-bold text-[#0058be]' >
-                         Items Selected
+                        Items Selected
                     </div>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 md:grid-cols-3 xl:grid-cols-4 py-10 gap-y-10 bg-[#f0f7ff] '>
@@ -45,11 +45,16 @@ export default function Cart() {
                                 ))}
                             </div>
 
+                            <div className='flex justify-between'>
+                                <div className='flex w-30 px-3 py-2 justify-around rounded-2xl shadow  bg-[#e0eeff]'>
+                                    <div className='px-3' onClick={() => { decreaseFromCart(item); toast.success('Success') }}>-</div>
+                                    <div>{item.quantity}</div>
+                                    <div className='px-3' onClick={() => { addToCart(item); toast.success('Success') }}>+</div>
+                                </div>
 
-                            <div className='flex w-30 px-3 py-2 justify-around rounded-2xl shadow  bg-[#e0eeff]'>
-                                <div className='px-3' onClick={() =>{ decreaseFromCart(item);toast.success('Success')}}>-</div>
-                                <div>{item.quantity}</div>
-                                <div className='px-3' onClick={() =>{ addToCart(item);toast.success('Success')}}>+</div>
+                                <div onClick={() => removeFromCart(item.id)} className='px-3 py-2 bg-[#ffd1d1] text-[#ff0101]'>
+                                    <i className="fa-solid fa-trash-can  "></i>
+                                </div>
                             </div>
 
                             <div className='text-[#0058be] mt-3 font-bold text-2xl'>
@@ -123,10 +128,10 @@ export default function Cart() {
                             Help Center
                         </div>
 
- 
+
                     </div>
 
-                   
+
                 </div>
                 <div className='text-gray-500 text-center mt-15'>
                     © 2024 TechBulk Wholesale. Professional Grade Logistics.
